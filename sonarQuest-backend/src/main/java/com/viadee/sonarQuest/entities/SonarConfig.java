@@ -15,66 +15,81 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "Sonar_Config")
 public class SonarConfig {
 
-    @JsonIgnore
-    @Id
-    @GeneratedValue
-    private Long id;
+	@JsonIgnore
+	@Id
+	@GeneratedValue
+	private Long id;
 
-    @NotNull
-    @Column(name = "name")
-    private String name;
+	@NotNull
+	@Column(name = "name")
+	private String name;
 
-    @NotNull
-    @Column(name = "sonar_server_url")
-    private String sonarServerUrl;
+	@NotNull
+	@Column(name = "sonar_server_url")
+	private String sonarServerUrl;
 
-    @Column(name = "http_basic_auth_username")
-    private String httpBasicAuthUsername;
+	@Column(name = "http_basic_auth_username")
+	private String httpBasicAuthUsername;
 
-    @Column(name = "http_basic_auth_password")
-    private String httpBasicAuthPassword;
+	@Column(name = "http_basic_auth_password")
+	private String httpBasicAuthPassword;
 
-    public Long getId() {
-        return id;
-    }
+	@Column(name = "organization")
+	private String organization;
 
-    public void setId(final Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(final Long id) {
+		this.id = id;
+	}
 
-    public void setName(final String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getSonarServerUrl() {
-        return sonarServerUrl;
-    }
+	public void setName(final String name) {
+		this.name = name;
+	}
 
-    public void setSonarServerUrl(final String sonarServerUrl) {
-        this.sonarServerUrl = sonarServerUrl;
-    }
+	public String getSonarServerUrl() {
+		return sonarServerUrl;
+	}
 
-    public String getHttpBasicAuthUsername() {
-        return httpBasicAuthUsername;
-    }
+	public void setSonarServerUrl(final String sonarServerUrl) {
+		this.sonarServerUrl = sonarServerUrl;
+	}
 
-    public void setHttpBasicAuthUsername(final String httpBasicAuthUsername) {
-        this.httpBasicAuthUsername = httpBasicAuthUsername;
-    }
+	public String getHttpBasicAuthUsername() {
+		return httpBasicAuthUsername;
+	}
 
-    public String getHttpBasicAuthPassword() {
-        return httpBasicAuthPassword;
-    }
+	public void setHttpBasicAuthUsername(final String httpBasicAuthUsername) {
+		this.httpBasicAuthUsername = httpBasicAuthUsername;
+	}
 
-    public void setHttpBasicAuthPassword(final String httpBasicAuthPassword) {
-        this.httpBasicAuthPassword = httpBasicAuthPassword;
-    }
+	public String getHttpBasicAuthPassword() {
+		return httpBasicAuthPassword;
+	}
 
-    public boolean hasHttpBasicAuth() {
-        return StringUtils.isNotBlank(httpBasicAuthUsername) && StringUtils.isNotBlank(httpBasicAuthPassword);
-    }
+	public void setHttpBasicAuthPassword(final String httpBasicAuthPassword) {
+		this.httpBasicAuthPassword = httpBasicAuthPassword;
+	}
+
+	public boolean hasHttpBasicAuth() {
+		return StringUtils.isNotBlank(httpBasicAuthUsername) && StringUtils.isNotBlank(httpBasicAuthPassword);
+	}
+
+	public String getOrganization() {
+		if (organization == null || organization.trim().length() == 0) {
+			return "default";
+		}
+		return organization;
+	}
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+
 }

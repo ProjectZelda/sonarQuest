@@ -3,4 +3,5 @@ export interface SonarCubeConfig {
   sonarServerUrl: string;
   httpBasicAuthUsername?: string;
   httpBasicAuthPassword?: string;
+  organization?: string;
 }

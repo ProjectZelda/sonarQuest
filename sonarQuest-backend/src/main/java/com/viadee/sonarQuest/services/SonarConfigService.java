@@ -34,6 +34,7 @@ public class SonarConfigService {
     private SonarConfig updateCurrentConfig(final SonarConfig config, final SonarConfig currentConfig) {
         currentConfig.setName(config.getName());
         currentConfig.setSonarServerUrl(config.getSonarServerUrl());
+        currentConfig.setOrganization(config.getOrganization());
         return sonarConfigRepository.save(currentConfig);
     }
 
