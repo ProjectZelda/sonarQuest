@@ -5,5 +5,5 @@ mat-progress-spinner {
 }
 
 .background{
-  background-image: url("/assets/images/marketplace.png");
+  background-image: url("../../../assets/images/marketplace.png");
 }
