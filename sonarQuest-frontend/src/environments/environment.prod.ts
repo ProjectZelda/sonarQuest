@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'http://localhost:8080',
+  endpoint: 'http://zelda.westeurope.cloudapp.azure.com:8080',
 };
