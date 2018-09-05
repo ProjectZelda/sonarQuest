@@ -1,6 +1,7 @@
 FROM node:9.11.1
 COPY  . /usr/src/sonarQuest
 WORKDIR /usr/src/sonarQuest
+RUN rm -rf ./node_modules
 RUN chown node:node /usr/src/sonarQuest
 USER node
 RUN mkdir /home/node/.npm-global

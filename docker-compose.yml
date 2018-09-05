@@ -4,7 +4,7 @@ services:
     build:
       context: sonarQuest-backend/
       dockerfile: Docker/Dockerfile
-    command: -DsimulateSonarServer=false
+    command: -DsimulateSonarServer=true
     ports:
      - "8080:8080"
   frontend:
