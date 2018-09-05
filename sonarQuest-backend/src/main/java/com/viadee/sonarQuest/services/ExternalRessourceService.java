@@ -144,7 +144,7 @@ public class ExternalRessourceService {
             final String projectKey, final int pageIndex) {
         final RestTemplate restTemplate = restTemplateService.getRestTemplate(sonarConfig);
         final String fooResourceUrl = sonarConfig.getSonarServerUrl() + "/api/issues/search?componentRoots="
-                + projectKey + "&pageSize=500&pageIndex=" + pageIndex;
+                + projectKey + "&pageSize=500&pageIndex=" + pageIndex + "&organization=code2bits-github";
         final ResponseEntity<SonarQubeIssueRessource> response = restTemplate.getForEntity(fooResourceUrl,
                 SonarQubeIssueRessource.class);
         return response.getBody();
