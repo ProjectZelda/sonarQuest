@@ -1,16 +1,13 @@
-<td-layout-nav-list #navList toolbarTitle="Sonar Quest" navigationRoute="/"
+<td-layout-nav-list #navList toolbarTitle="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sonar Quest" navigationRoute="/"
                     [opened]="media.registerQuery('gt-sm') | async"
                     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
                     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '300px' : '100%'">
-
-  <div td-sidenav-toolbar-content>
-    <i class="ra ra-sword"></i>
-  </div>
+    <img  td-sidenav-toolbar-content class="logo" src="../assets/images/logo.png" alt="unavailable"><br>
   <mat-nav-list td-sidenav-content (click)="!media.query('gt-sm') && navList.close()">
     <mat-list-item disableRipple *ngIf="isWorldSelectVisible">
       <i mat-list-icon class="ra ra-mountains ra-lg navlist"></i>
       <div flex></div>
-      <mat-select mat-line placeholder="Welt" [(ngModel)]="selected" floatPlaceholder="never">
+      <mat-select mat-line placeholder="World" [(ngModel)]="selected" floatPlaceholder="never">
         <mat-option flex="20" *ngFor="let world of worlds" [value]="world"
                     (click)="updateWorld(world)">{{ world.name }}
         </mat-option>
@@ -63,24 +60,23 @@
   </mat-nav-list>
   <div td-toolbar-content layout="row" flex>
     <div class="vertical-align">{{determinePageTitle(router.url)}}</div>
-    <div flex></div>
-    <div class="username-toolbar vertical-align">
-        <button *ngIf="user" mat-icon-button routerLink="/{{myAvatarUrl}}">
-          <mat-icon>person</mat-icon>
-          <span>{{user?.username}}</span>
+    <div class="login-align">
+      <button *ngIf="!user" mat-icon-button (click)="login()" class="opaque"> Sign In
+        <mat-icon class="margin-align">lock_outline</mat-icon>
+      </button>
+
+      <button *ngIf="user" mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/{{myAvatarUrl}}">
+          <mat-icon>person_outline</mat-icon> {{user?.username}}
         </button>
-    </div>
-    <div flex="5"></div>
-    <div class="lightning-login-align">
-      <button mat-icon-button (click)="toggleDesign()">
-        <i mat-list-icon class="ra ra-lightning-bolt ra-2x navlist"></i>
-      </button>
-      <button *ngIf="!user" mat-icon-button (click)="login()">
-        <mat-icon>launch</mat-icon>
-      </button>
-      <button *ngIf="user" mat-icon-button (click)="logout()">
-        <mat-icon>power_settings_new</mat-icon>
-      </button>
+        <button mat-menu-item (click)="logout()" class="opaque">
+          <mat-icon>lock_open</mat-icon> Sign Out
+        </button>
+      </mat-menu>
+
     </div>
   </div>
   <router-outlet></router-outlet>

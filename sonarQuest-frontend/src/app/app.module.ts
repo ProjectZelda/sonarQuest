@@ -19,7 +19,7 @@ import {AppComponent} from './app.component';
 import {
   MatListModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatProgressBarModule,
   MatGridListModule, MatTooltipModule, MatButtonModule, MatProgressSpinnerModule, MatSelectModule, MatTabsModule,
-  MatDialogModule, MatInputModule, MatCheckboxModule, MatSnackBarModule, MatDialogRef, MatDialog, MAT_DIALOG_DATA
+  MatDialogModule, MatInputModule, MatCheckboxModule, MatSnackBarModule, MatMenuModule, MatDialogRef, MatDialog, MAT_DIALOG_DATA
 } from '@angular/material';
 import {MyAvatarPageComponent} from './pages/my-avatar-page/my-avatar-page.component';
 import {AdventurePageComponent} from './pages/adventure-page/adventure-page.component';
@@ -198,7 +198,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatDialogModule,
     MatInputModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [TdMediaService,
     WorldService,

@@ -80,7 +80,7 @@
       "PROJECT": "Projekt",
       "QUEST": "Suche",
       "TYPE": "Typ",
-      "WORLD": "Welt",
+      "WORLD": "World",
       "ACTIVE": "Aktiv",
       "UPDATE_TASKS": "Aufgaben aktualisieren",
       "MISSION": "Mission"
@@ -128,11 +128,11 @@
     "NEW_ADVENTURE": "Neues Abenteuer"
   },
   "WORLD": {
-    "WORLD": "Welt",
-    "WORLDS": "Welten",
+    "WORLD": "World",
+    "WORLDS": "Worlds",
     "ACTIVE": "Aktiv",
-    "CHOOSE_WORLD": "Wähle deine Welt",
-    "UPDATE_WORLDS": "Aktualisiere Welten"
+    "CHOOSE_WORLD": "Choose World",
+    "UPDATE_WORLDS": "Update World"
   },
   "TASK": {
     "TASK": "Auftrag",
