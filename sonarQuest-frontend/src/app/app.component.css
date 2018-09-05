@@ -15,7 +15,7 @@
 }
 
 mat-sidenav-container{
-  background-image: url("/assets/images/background/bg03.jpg");
+  background-image: url("../assets/images/background/bg3.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-attachment: fixed;

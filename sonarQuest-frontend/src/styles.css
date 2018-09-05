@@ -1,4 +1,7 @@
 /*------------------DESIGN-START------------------*/
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
 
 .background-image{
   /* background-image: LOOK AT -> app.component.ts -> changebackground() */
