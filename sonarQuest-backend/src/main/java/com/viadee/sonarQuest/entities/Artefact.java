@@ -38,7 +38,7 @@ public class Artefact {
     @Column(name = "description")
     private String description;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "level_id")
     private Level minLevel;
 
