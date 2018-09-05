@@ -30,7 +30,7 @@ export class GamemasterQuestComponent implements OnInit {
     {name: 'gold', label: 'Gold'},
     {name: 'xp', label: 'XP'},
     {name: 'story', label: 'Erzählung'},
-    {name: 'world.name', label: 'Welt'},
+    {name: 'world.name', label: 'World'},
     {name: 'adventure.title', label: 'Abenteuer'},
     {name: 'status', label: 'Status'},
     {name: 'edit', label: ''}
