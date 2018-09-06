@@ -1,3 +1,12 @@
 .buttons {
     float: right;
 }
+
+.sb-logo {
+  width: 45px;
+  height: auto;
+}
+
+.buttons {
+  float: none;
+}

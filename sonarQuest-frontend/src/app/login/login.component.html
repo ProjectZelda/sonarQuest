@@ -1,31 +1,30 @@
-<mat-toolbar color="primary">
-  <h2 mat-dialog-title>{{"LOGIN.LOGIN"| translate}}</h2>
-</mat-toolbar>
-<mat-dialog-content>
-  <div>
-    <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <input matInput placeholder='{{"LOGIN.USERNAME"| translate}}'
-               formControlName="username"
-               required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput [type]="'password'"
-               placeholder='{{"LOGIN.PASSWORD"| translate}}'
-               formControlName="password"
-               required>
-      </mat-form-field>
-      <div class="buttons">
-        <button mat-button mat-raised-button color="primary" mat-dialog-close>
-          Cancel
-        </button>
-        <button 
-          mat-button mat-raised-button color="primary" 
-          [disabled]="loginFormGroup.invalid"
-          type="submit">
-          Ok
-        </button>
-      </div>
-    </form>
-  </div>
-</mat-dialog-content>
+<div style="margin: 20px;">
+  <mat-dialog-content>
+    <div align="center">
+      <img class="sb-logo" src="../../assets/images/logo.png" alt="unavailable"><br>
+    </div>
+    <h1 style="font-weight: lighter; color: #0033AA;text-align: center;">Sign In</h1>
+    <h4 style="font-weight: lighter;text-align: center;color: #444;">Please sign in with your username and password</h4>
+    <br>
+    <div align="center">
+      <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <input matInput placeholder='{{"LOGIN.USERNAME"| translate}}'
+                 formControlName="username"
+                 required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [type]="'password'"
+                 placeholder='{{"LOGIN.PASSWORD"| translate}}'
+                 formControlName="password"
+                 required>
+        </mat-form-field>
+        <br><br><br>
+        <div class="buttons">
+          <button mat-button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+          <button mat-button mat-raised-button color="primary" [disabled]="loginFormGroup.invalid" type="submit">OK</button>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+</div>
