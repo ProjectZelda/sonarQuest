@@ -110,7 +110,7 @@
     "GOLD": "Gold",
     "XP": "XP",
     "LEVEL": "Level",
-    "ABOUTME": "About me",
+    "ABOUTME": "About Me",
     "AVATARRACE": "Race",
     "AVATARCLASS": "Class",
     "TROPHIES": "Trophies"
@@ -169,7 +169,7 @@
   },
   "LOGIN": {
     "LOGIN": "Login",
-    "USERNAME": "Benutzername",
-    "PASSWORD": "Passwort"
+    "USERNAME": "Username",
+    "PASSWORD": "Password"
   }
 }
