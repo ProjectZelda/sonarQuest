@@ -1,96 +1,114 @@
 <div class="background">
-  <mat-card>
-    <mat-card-content>
-      <div layout="row">
-        <div flex>
-          <div layout="row">
-            <div class="avatar-image">
-              <img [src]="imageToShow">
-            </div>
-            <div flex>
-              <div layout="column">
-                <mat-card-title>{{user?.username}}</mat-card-title>
-                <mat-card-subtitle>{{"DEVELOPER.AVATARCLASS"| translate}}: {{user?.avatarClass.name}}</mat-card-subtitle>
-                <mat-card-subtitle>{{"DEVELOPER.AVATARRACE"| translate}}: {{user?.avatarRace.name}}</mat-card-subtitle>
-              </div>
-            </div>
+  <div style="padding: 20px;">
+    <mat-card width="50%">
+      <div class="grid-container-3">
+        <div class="grid-item-3">
+          <div class="avatar-image" style="margin-top: 40px;">
+            <img [src]="imageToShow">
           </div>
         </div>
 
-        <div flex-end>
-          <div layout="column">
-            <div layout="row">
-              <div flex></div>
-              <div flex-end>
-                <button mat-icon-button (click)="editAvatar()">
-                  <mat-icon class="icon">mode_edit</mat-icon>
-                </button>
-              </div>
-            </div>
-
-            <div layout="row">
-              <div layout="column" class="progress-area">
-                <div layout="row">
-                  <div flex>
-                    <span>{{"DEVELOPER.LEVEL"| translate}}: {{level}}</span>
-                  </div>
-
-                  <div flex></div>
-                  <div flex-end>
-                    <span>{{"GLOBAL.GOLD"| translate}}: {{user?.gold}}
-                      <i class="ra ra-gold-bar ra-lg"></i>
-                    </span>
-                  </div>
+        <div class="grid-item-3">
+          <div flex-end>
+            <div layout="column">
+              <div layout="row">
+                <div flex></div>
+                <div flex-end>
+                  <button mat-icon-button (click)="editAvatar()">
+                    <mat-icon class="icon">mode_edit</mat-icon>
+                  </button>
                 </div>
-
-                <div layout="row">
-                  <div flex></div>
-                  <div flex-end>
-                    <span flex>{{"GLOBAL.XP"| translate}}: {{user?.xp}}/{{user?.level.maxXp}}
-                      <i class="ra ra-perspective-dice-random ra-lg"></i>
-                    </span>
-                  </div>
-                </div>
-
-                <div layout="row">
-                  <mat-progress-bar flex mode="determinate" [value]="XPpercent"></mat-progress-bar>
-                </div>
-
               </div>
             </div>
           </div>
+          <table style="text-align: left">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Username" disabled value="{{user?.username | titlecase}}">
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Class" disabled value="{{user?.avatarClass.name}}">
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Race" disabled value="{{user?.avatarRace.name}}">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
-    </mat-card-content>
+    </mat-card>
 
-    <mat-toolbar>
-      <h2 mat-dialog-title>{{"DEVELOPER.ABOUTME" | translate}}:</h2>
-    </mat-toolbar>
-
-    <mat-card-content>
-      <p>{{user?.aboutMe}}</p>
-    </mat-card-content>
-
-    <mat-toolbar>
-      <h2 mat-dialog-title>{{"ARTEFACT.ARTEFACTS" | translate}}:</h2>
-    </mat-toolbar>
-
-    <mat-card-content>
-      <mat-grid-list cols="4" rowHeight="3:1">
-        <mat-grid-tile *ngFor="let artefact of user?.artefacts">
-          <i [matTooltip]="'Name:' + artefact.name + '\nSkills: ' + createSkillsList(artefact)" [matTooltipClass]="'tooltipMultiline'"
-            matTooltipPosition="after" class="ra ra-3x" [ngClass]="artefact.icon"></i>
-          <span>{{artefact.name}}</span>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </mat-card-content>
-
-    <mat-toolbar>
-        <h2 mat-dialog-title>{{"DEVELOPER.TROPHIES" | translate}}:</h2>
-      </mat-toolbar>
-
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="card-title">{{"DEVELOPER.ABOUTME" | translate}}:</mat-card-title>
+      </mat-card-header>
       <mat-card-content>
-        <p>Coming soon.....</p>
+        <p class="stitched">{{user?.aboutMe}}</p>
       </mat-card-content>
-  </mat-card>
+    </mat-card>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <mat-card>
+          <mat-card-title class="card-title">{{"ARTEFACT.ARTEFACTS" | translate}}:</mat-card-title>
+          <mat-card-content>
+            <div class="stitched-orange">
+              <div *ngFor="let artefact of user?.artefacts">
+                <table>
+                  <tr>
+                    <td>
+                      <i [matTooltip]="'Name:' + artefact.name + '\nSkills: ' + createSkillsList(artefact)"
+                         [matTooltipClass]="'tooltipMultiline'"
+                         matTooltipPosition="after" class="ra ra-3x" [ngClass]="artefact.icon"></i>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;{{artefact.name}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="grid-item">
+        <mat-card>
+          <mat-card-title class="card-title">Stats:</mat-card-title>
+          <mat-card-content>
+            <div class="stitched">
+              <div class="grid-container-stats">
+                <div class="grid-item grid-label">{{"DEVELOPER.LEVEL"| translate}} <i class="ra ra-archery-target ra-lg" style="color: darkgreen"></i></div>
+                <div class="grid-item grid-label">{{"GLOBAL.GOLD"| translate}}  <i class="ra ra-gold-bar ra-lg" style="color: goldenrod"></i></div>
+                <div class="grid-item grid-label">{{"GLOBAL.XP"| translate}} <i class="ra ra-archer ra-lg" style="color: darkred"></i></div>
+                <div class="grid-item grid-ref">{{level}}</div>
+                <div class="grid-item grid-ref">{{user?.gold}}</div>
+                <div class="grid-item grid-ref">{{user?.xp}}/{{user?.level.maxXp}}</div>
+              </div>
+              <div style="padding-top: 10px;">
+                <mat-progress-bar flex mode="determinate" [value]="XPpercent"></mat-progress-bar>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="grid-item">
+        <mat-card>
+          <mat-card-title class="card-title">{{"DEVELOPER.TROPHIES" | translate}}:</mat-card-title>
+          <mat-card-content>
+            <p class="stitched-orange">Coming Soon...</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </div>

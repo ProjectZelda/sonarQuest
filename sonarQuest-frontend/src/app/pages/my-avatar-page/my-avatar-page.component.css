@@ -1,4 +1,111 @@
 .background{
-  background-image: url("/assets/images/player.png");
+  background-image: url("../../../assets/images/player.png");
+}
 
+.grid-container-stats {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  font-size: 10px;
+  padding-bottom: 2px;
+}
+
+.grid-spacing {
+  padding: 5px;
+}
+
+.grid-label {
+  color: #767676;
+  font-weight: bold;
+  font-size: 14pt;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.grid-ref {
+  color: #0033AA;
+  font-size: 25pt;
+  text-align: center;
+  font-weight: bolder;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: linear-gradient(-45deg, #0033AA, #6497ff);
+}
+
+::ng-deep .light mat-card mat-toolbar {
+  background-color: #fff;
+}
+
+.card-title {
+  background-color: #fff;
+  color: #4A4A4A;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 0px;
+}
+
+.stitched {
+  padding: 10px;
+  background-color: rgba(229,234,246,0.68);
+  color: #4A4A4A;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.3em;
+  border: 1px dashed #3366CC;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.02);
+  min-height: 100px;
+}
+
+.stitched-orange {
+  padding: 10px;
+  background-color: #fff7e8;
+  color: #4A4A4A;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.3em;
+  border-radius: 6px;
+  border: 1px dashed rgba(255,184,34,0.4);
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.02);
+  min-height: 100px;
+}
+
+.mat-chip.mat-chip-selected.mat-warn {
+  background-color: #3366CC;
+  color: white;
+  align-content: center;
+  font-size: 13px;
+}
+
+.mat-chip.mat-chip-selected.mat-accent {
+  background: linear-gradient(307.62deg, #1340EF 0%, #009DFF 100%);
+  color: white;
+  align-content: center;
+  font-size: 13px;
+}
+
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 200px 300px 300px;
+  padding: 10px;
+}
+.grid-item-3 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+::ng-deep .mat-input-element:disabled {
+  color: #222222 !important;
 }
