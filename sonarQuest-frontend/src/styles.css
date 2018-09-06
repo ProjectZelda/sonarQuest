@@ -1,6 +1,7 @@
 /*------------------DESIGN-START------------------*/
 html, body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #F7F9FA;
 }
 
 .background-image{
@@ -20,8 +21,11 @@ html, body {
 }
 
 .light mat-card mat-toolbar {
-  background-color:rgba(245, 245, 245 , 0.87) !important; 
-  color: black !important;
+  background-color: #fff;
+  color: #4A4A4A;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
 } 
 
 mat-toolbar.mat-toolbar.mat-primary i.navlist.mat-list-icon{
@@ -33,7 +37,7 @@ mat-toolbar.mat-toolbar.mat-primary i.navlist.mat-list-icon{
 }
 
 .dark mat-card, .dark mat-sidenav{
-  background-color: rgba(66, 66, 66, 0.55) !important; 
+  background-color: rgba(66, 66, 66, 0.55) !important;
   color: white !important;
 } 
 
@@ -42,7 +46,7 @@ mat-toolbar.mat-toolbar.mat-primary i.navlist.mat-list-icon{
 }
 
 .dark mat-card mat-toolbar {
-  background-color:rgba(66, 66, 66, 0.87) !important; 
+  background-color:rgba(66, 66, 66, 0.87) !important;
   color: white !important;
 } 
 

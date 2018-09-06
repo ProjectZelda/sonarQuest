@@ -1,4 +1,4 @@
-<td-layout-nav-list #navList toolbarTitle="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sonar Quest" navigationRoute="/"
+<td-layout-nav-list #navList toolbarTitle="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBG Quest" navigationRoute="/"
                     [opened]="media.registerQuery('gt-sm') | async"
                     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
                     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '300px' : '100%'">
@@ -70,7 +70,7 @@
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="/{{myAvatarUrl}}">
-          <mat-icon>person_outline</mat-icon> {{user?.username}}
+          <mat-icon>person_outline</mat-icon> {{user?.username | titlecase}}
         </button>
         <button mat-menu-item (click)="logout()" class="opaque">
           <mat-icon>lock_open</mat-icon> Sign Out
