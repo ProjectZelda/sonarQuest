@@ -1,36 +1,29 @@
 <mat-card-content>
-  <div flex>
-    <mat-input-container>
-      <input matInput placeholder="Configname" [(ngModel)]="configName">
-    </mat-input-container>
-  </div>
+  <div class="container">
+    <mat-form-field>
+      <input matInput placeholder="Config Name" [(ngModel)]="configName">
+    </mat-form-field>
 
-  <div flex>
-    <mat-input-container>
+    <mat-form-field>
       <input matInput placeholder="SonarQube URL" [(ngModel)]="sonarQubeUrl">
-    </mat-input-container>
-    <button mat-mini-fab color="primary" (click)="checkSonarCubeUrl()">Check</button>
-  </div>
+    </mat-form-field>
+    <button mat-button mat-stroked-button color="primary" color="primary" (click)="checkSonarCubeUrl()">Check URL</button>
+    <br><br><br>
 
-  <div flex>
-    <mat-input-container>
+    <mat-form-field>
       <input matInput placeholder="Http Basic Auth Username" [(ngModel)]="httpBasicAuthUsername">
-    </mat-input-container>
-  </div>
+    </mat-form-field>
 
-  <div flex>
-    <mat-input-container>
+    <mat-form-field>
       <input matInput placeholder="Http Basic Auth Password" [(ngModel)]="httpBasicAuthPassword" type="password">
-    </mat-input-container>
-  </div>
+    </mat-form-field>
 
-  <div flex>
-    <mat-input-container>
+    <mat-form-field>
       <input matInput placeholder="Organization" [(ngModel)]="organization" type="text">
-    </mat-input-container>
-  </div>
+    </mat-form-field>
 
-  <div>
-    <button mat-button color="primary" (click)="save()">Save</button>
+    <div>
+      <button mat-button mat-raised-button color="primary" (click)="save()">Save</button>
+    </div>
   </div>
 </mat-card-content>
