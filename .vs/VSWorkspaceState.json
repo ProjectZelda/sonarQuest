@@ -1,0 +1,23 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\sonarQuest-backend",
+    "\\sonarQuest-backend\\src",
+    "\\sonarQuest-backend\\src\\main",
+    "\\sonarQuest-backend\\src\\main\\java",
+    "\\sonarQuest-backend\\src\\main\\java\\com",
+    "\\sonarQuest-backend\\src\\main\\java\\com\\viadee",
+    "\\sonarQuest-backend\\src\\main\\java\\com\\viadee\\sonarQuest",
+    "\\sonarQuest-backend\\src\\main\\java\\com\\viadee\\sonarQuest\\services",
+    "\\sonarQuest-frontend\\src",
+    "\\sonarQuest-frontend\\src\\app",
+    "\\sonarQuest-frontend\\src\\app\\pages",
+    "\\sonarQuest-frontend\\src\\app\\pages\\gamemaster-page",
+    "\\sonarQuest-frontend\\src\\app\\pages\\gamemaster-page\\components",
+    "\\sonarQuest-frontend\\src\\app\\pages\\gamemaster-page\\components\\gamemaster-quest",
+    "\\sonarQuest-frontend\\src\\app\\pages\\gamemaster-page\\components\\gamemaster-quest\\components",
+    "\\sonarQuest-frontend\\src\\app\\pages\\gamemaster-page\\components\\gamemaster-quest\\components\\gamemaster-quest-create"
+  ],
+  "SelectedNode": "\\sonarQuest-backend\\src\\main\\java\\com\\viadee\\sonarQuest\\services\\UserService.java",
+  "PreviewInSolutionExplorer": false
+}
