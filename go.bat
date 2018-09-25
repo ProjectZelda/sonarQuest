@@ -1,0 +1,1 @@
+docker-compose up --build --build-args npm_config_registry=http://nexus.standardbank.co.za:8090/nexus/content/repositories/npmjs/

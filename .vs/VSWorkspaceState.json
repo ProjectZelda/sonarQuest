@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs\\images",
     "\\sonarQuest-backend",
     "\\sonarQuest-backend\\src",
     "\\sonarQuest-backend\\src\\main",
     "\\sonarQuest-backend\\src\\main\\java",
-    "\\sonarQuest-backend\\src\\main\\java\\com",
-    "\\sonarQuest-backend\\src\\main\\java\\com\\viadee",
-    "\\sonarQuest-backend\\src\\main\\resources",
-    "\\sonarQuest-backend\\src\\main\\resources\\licenses"
+    "\\sonarQuest-frontend",
+    "\\sonarQuest-frontend\\src",
+    "\\sonarQuest-frontend\\src\\app",
+    "\\sonarQuest-frontend\\src\\app\\pages",
+    "\\sonarQuest-frontend\\src\\app\\pages\\empty-page"
   ],
-  "SelectedNode": "\\sonarQuest-backend\\src\\main\\resources\\db\\test-data\\V0_0_2__test-data.sql",
+  "SelectedNode": "\\sonarQuest-frontend\\src\\app\\pages\\empty-page\\empty-page.component.html",
   "PreviewInSolutionExplorer": false
 }

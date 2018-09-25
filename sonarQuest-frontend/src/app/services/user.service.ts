@@ -49,6 +49,11 @@ export class UserService {
     return this.user;
   }
 
+  public getLeaders(): Observable<User[]> {
+    const url = `${environment.endpoint}/leaders`;
+    return this.httpClient.get<User[]>(url);
+  }
+
   public getUsers(): Observable<User[]> {
     const url = `${environment.endpoint}/user/all`;
     return this.httpClient.get <User[]>(url);
@@ -73,5 +78,6 @@ export class UserService {
     const url = `${environment.endpoint}/user/${user.id}`;
     return this.httpClient.delete(url).toPromise();
   }
+
 
 }

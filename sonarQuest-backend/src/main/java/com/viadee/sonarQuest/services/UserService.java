@@ -119,6 +119,10 @@ public class UserService implements UserDetailsService {
         return userRepository.findAll();
     }
 
+	public List<User> getLeaders() {
+		return userRepository.getLeaders();
+	}
+
     public List<User> findByRole(final RoleName roleName) {
         return findAll().stream()
                 .filter(user -> user.getRole().getName() == roleName)

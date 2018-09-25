@@ -11,6 +11,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUsername(String username);
     
-    @Query("FROM User ORDER BY level.level DESC, xp DESC")
+    @Query("Select id, username, level_id, gold, xp FROM User ORDER BY level.level DESC, xp DESC")
     List<User> getLeaders();
 }

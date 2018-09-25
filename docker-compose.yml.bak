@@ -14,10 +14,6 @@ services:
      - "8080:8080"
 ##################################################
 #  the h2 volume maps a volume to the local disk which allows the db to be persisted.
-#  the h2 mapping works with the application.properties file datasource setting 
-#
-#      spring.datasource.url=jdbc:h2:file:/h2dir/db/sonarQuest
-#
 #  the .m2 volume maps to the local .m2 which prevents the docker build from "downloading the internet".
 ##################################################
 #    volumes:

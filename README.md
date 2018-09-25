@@ -86,3 +86,22 @@ Additionally, a Game Master is able to manually create "special tasks" which are
 - Increase the coverage of a changed class for 10%
 - Increase the documentation quality of a changed class
 - Apply the DRY principle in one class
+
+### Blue Quest 
+
+Changes to standard docker-compose.yml 
+
+
+* <b>DB Persistance </b></br>
+Two changes are required : </br>
+a) docker-compose.yml file  - creation of a volume definition to allow the DB file to be saved outside the container.</br>
+b) application.properties modify the datasource setting to point to the volume.</br></br>
+
+* <b> npm repository  - 'prevent downloading the internet'</b></br> 
+add a volume that maps to local .m2 folder, this allows all packages that are downloaded to be re-used in future builds.
+
+### Backend standalone launch command 
+        ./sonarQuest-backend/mvn spring-boot:run -DsimulateSonarServer=true
+	
+
+

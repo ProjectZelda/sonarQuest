@@ -8,7 +8,7 @@ ENV PATH=/home/node/.npm-global/bin:$PATH
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV npm_config_registry=http://nexus.standardbank.co.za:8090/nexus/content/repositories/npmjs/
 RUN npm install -g @angular/cli
-RUN npm config set proxy http://sbicza01\a142337:rzAug2018@websenseproxy.standardbank.co.za:8080
+RUN npm config set proxy http://websenseproxy.standardbank.co.za:8080
 RUN npm install
 RUN npm run build
 EXPOSE 4200

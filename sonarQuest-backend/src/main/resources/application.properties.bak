@@ -22,13 +22,13 @@ avatar.directory=./avatar
 # DATASOURCE
 # ========================================
 # - org line before trying to set h2 files to volume
-spring.datasource.url=jdbc:h2:file:./target/classes/db/sonarQuest
+# spring.datasource.url=jdbc:h2:file:./target/classes/db/sonarQuest
 # check docker-compose for volume defintion,
 #    volumes:
 #     - [path on server]:[path to volume in docker]
-#	  - ./h2data:/h2dir    ------|
+#	  - ./h2data:/h2dir        ------|
 #                                    v
-# spring.datasource.url=jdbc:h2:file:/h2dir/db/sonarQuest
+spring.datasource.url=jdbc:h2:file:/h2dir/db/sonarQuest
 spring.datasource.platform=h2
 spring.datasource.driverClassName = org.h2.Driver
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
