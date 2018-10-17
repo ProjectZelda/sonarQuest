@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -24,7 +25,7 @@ import com.viadee.sonarQuest.rules.SonarQuestStatus;
 public class Task {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name = "title")
@@ -39,7 +40,7 @@ public class Task {
 
     @Column(name = "xp")
     private Long xp;
-
+	// expect issues here ! table schema is _key -- no references to key column ? 
     @Column(name = "task_key")
     private String key;
 
