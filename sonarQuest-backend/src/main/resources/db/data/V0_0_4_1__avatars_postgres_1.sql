@@ -1,4 +1,4 @@
-INSERT INTO User (username, password, role_id, gold, xp, level_id, picture, about_me, avatar_class_id, avatar_race_id) 
+INSERT INTO _User (username, password, role_id, gold, xp, level_id, picture, about_me, avatar_class_id, avatar_race_id) 
  VALUES (
  'Kron',   
  '$2a$10$LoXVU5ODwytMz3Mh/Nft4.WaasCtwEuN6NEeJCER5X8o1ayCJHVxO', 
